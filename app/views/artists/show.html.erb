@@ -6,7 +6,7 @@
 <p>Songs: <% @artist.songs.each do |song| %></p>
 <p><%= song.name %></p>
 <p><% end %></p>
-<p><%= image_tag @artist.image_url %></p>
+<p><%= image_tag @artist.photo.image %></p>
 <%= link_to "Edit Artist", edit_artist_path %>
 <%= link_to "Delete Artist", artist_path(@artist.id), method: :delete, data: { confirm: "Are you sure?" } %>
 <%= link_to "Add Song", new_song_path(:id => @artist.id) %>

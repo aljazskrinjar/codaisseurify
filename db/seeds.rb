@@ -6,3 +6,7 @@ artist2=Artist.create!(name: "Slaki", age: 80, bio: "Slaki are artist from SLove
 song1 = Song.create!(name: "Cebelice",artist: artist1)
 song2 = Song.create!(name: "Na Golici",artist: artist1)
 song3 = Song.create!(name: "Ta sosedov Francl", artist: artist2)
+
+
+photo1 = Photo.create!(remote_image_url: "http://res.cloudinary.com/aljazcloud/image/upload/v1508014920/61092292_os1xc2.jpg", artist: artist1)
+photo2 = Photo.create!(remote_image_url: "http://res.cloudinary.com/aljazcloud/image/upload/v1508014927/hqdefault_i6zzoj.jpg", artist: artist2)
