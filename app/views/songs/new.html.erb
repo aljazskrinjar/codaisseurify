@@ -1,0 +1,8 @@
+<h1>New song</h1>
+
+<%= form_for @song do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+  <%= f.hidden_field :artist_id, :value => @artist.id %>
+  <%= f.submit "Create" %>
+<% end %>

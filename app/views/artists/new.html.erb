@@ -1,0 +1,17 @@
+<h1>New Artist</h1>
+
+<%= form_for @artist do |a| %>
+  <%= a.label :name %>
+  <%= a.text_field :name %>
+
+  <%= a.label :age %>
+  <%= a.number_field :age %>
+
+  <%= a.label :bio %>
+  <%= a.text_field :image_url %>
+
+  <%= a.label :image_url %>
+  <%= a.text_field :image_url %>
+
+  <%= a.submit "Create" %>
+<% end %>

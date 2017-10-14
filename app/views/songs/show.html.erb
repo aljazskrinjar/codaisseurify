@@ -1,0 +1,5 @@
+<p>Songs from: <%= @artist.name%></p>
+<p><% @artist.songs.each do |song| %></p>
+<p><%= song.name %>
+<%= link_to "Delete Song", song_path(song.id), method: :delete, data: { confirm: "Are you sure?" } %></p>
+<p><% end %></p>
