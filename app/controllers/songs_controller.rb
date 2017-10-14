@@ -8,9 +8,9 @@ class SongsController < ApplicationController
   def create
     #@artist= Artist.find params[:id]
     #it should get params from site
-    song_params_name = params.require(:song).permit(:name, :artist_id)
+    song_params = params.require(:song).permit(:name, :artist_id)
     #using the params to create a new instance of song class
-    @song=Song.new( song_params_name)
+    @song=Song.new( song_params)
     #redirect
 
     if @song.save
