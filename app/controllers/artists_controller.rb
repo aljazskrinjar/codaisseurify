@@ -1,7 +1,16 @@
 class ArtistsController < ApplicationController
 
     def index
-       @artists = Artist.all
+
+       if Artist.descenderValue
+        @artists=Artist.all.order(:name)
+
+      else
+
+        @artists=Artist.all.order("name DESC")
+        
+      end
+
      end
 
      def show

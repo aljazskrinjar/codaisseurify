@@ -6,4 +6,5 @@
 
 <% end %>
 
-<%= link_to "Add a new Artist", new_artist_path %>
+  <%= link_to "Order name Ascending", artists_path, {action: Artist.descenderOff} %>
+  <%= link_to "Order name Descending", artists_path, {action: Artist.descender} %>
