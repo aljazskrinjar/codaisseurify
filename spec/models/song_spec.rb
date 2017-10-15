@@ -16,9 +16,7 @@ RSpec.describe Song, type: :model do
       expect(song.artist).to eq(artist)
     end
 
-    # OR, go the shoulda way:
-
-    #it { is_expected.to belong_to :user}
+    
   end
 
 end
