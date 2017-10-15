@@ -20,4 +20,25 @@ RSpec.describe Artist, type: :model do
    it { is_expected.to validate_presence_of(:age) }
 
   end
+
+  describe "Artist song association" do
+  let(:artist) { create :artist }
+  let!(:song) { create :song, artist: artist }
+
+  it "has many songs" do
+    song1 = artist.songs.new(name: "En hribcek bom kupil")
+    song2 = artist.songs.new(name: "Pomladna veselica")
+    song3 = artist.songs.new(name: "V dolini tihi")
+    song4 = artist.songs.new(name: "Tiste tri besede")
+
+    expect(artist.songs).to include(song1)
+    expect(artist.songs).to include(song2)
+    expect(artist.songs).to include(song3)
+    expect(artist.songs).to include(song4)
+  end
+
+  
+end
+
+
 end
