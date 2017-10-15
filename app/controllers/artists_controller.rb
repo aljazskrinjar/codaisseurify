@@ -8,7 +8,7 @@ class ArtistsController < ApplicationController
       else
 
         @artists=Artist.all.order("name DESC")
-        
+
       end
 
      end
@@ -24,11 +24,11 @@ class ArtistsController < ApplicationController
      end
 
      def create
-       #it should get params from site
+       #not working
+
        artist_params = params.require(:artist).permit(:name, :age, :image_url)
-       #using the params to create a new instance of artist class
        @artist=Artist.new(artist_params)
-       #redirect
+
 
        if @artist.save
          redirect_to @artist
