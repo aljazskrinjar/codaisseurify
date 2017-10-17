@@ -1,7 +1,11 @@
+Artist.destroy_all
+Song.destroy_all
+Photo.destroy_all
+
 
 artist1=Artist.create!(name: "Avseniki", age: 80, bio: "Ansambel bratov Avsenik je v svetovnem merilu verjetno najuspešnejša slovenska glasbena skupina. Delovala je od leta 1953 do 1990.", image_url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTUUtD06g0jzTBPKDK2hYsmeAQnBtUB3DHIBamkCvjkiFlkxhBHZw")
 artist2=Artist.create!(name: "Slaki", age: 70, bio: "Slak je ustvaril novo glasbeno smer z ljudskim instrumentom – diatonično harmoniko in je hkrati avtor diatonične harmonike, kakršno poznamo danes.", image_url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTUUtD06g0jzTBPKDK2hYsmeAQnBtUB3DHIBamkCvjkiFlkxhBHZw")
-artist3=Artist.create!(name: "Mladi Dolenci", age: 35, bio: "Ansambel Mladi Dolenjci so narodnozabavna zasedba, ki deluje od leta 1996. Sedež imajo v Novem mestu. Gre za trio zasedbo s troglasnim petjem. ", image_url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTUUtD06g0jzTBPKDK2hYsmeAQnBtUB3DHIBamkCvjkiFlkxhBHZw")
+artist3=Artist.create!(name: "Mladi Dolenci", age: 35, bio: "Ansambel Mladi Dolenjci so narodnozabavna zasedba, ki deluje od leta 1996. Sedež imajo v Novem mestu. Gre za trio zasedbo s troglasnim petjem. ", image_url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRX-b5AZsJQ5zVirC2aYDLjzFfw8xVv7Tm4ip1jMzz2VZ2HejPQ")
 
 
 song1 = Song.create!(name: "Cebelice",artist: artist1)

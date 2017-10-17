@@ -4,10 +4,12 @@ class ArtistsController < ApplicationController
 
        if Artist.descenderValue
         @artists=Artist.all.order(:name)
+        Artist.descenderOff
 
       else
 
         @artists=Artist.all.order("name DESC")
+        Artist.descender
 
       end
 
