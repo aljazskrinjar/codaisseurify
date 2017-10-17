@@ -9,7 +9,7 @@ class ArtistsController < ApplicationController
       else
 
         @artists=Artist.all.order("name DESC")
-        Artist.descender
+       Artist.descender
 
       end
 
