@@ -5,7 +5,7 @@ class ArtistsController < ApplicationController
        if Artist.descenderValue
         @artists=Artist.all.order(:name)
 
-      else
+       else
 
         @artists=Artist.all.order("name DESC")
 
@@ -24,7 +24,7 @@ class ArtistsController < ApplicationController
      end
 
      def create
-       #not working
+       #not
 
        artist_params = params.require(:artist).permit(:name, :age, :image_url)
        @artist=Artist.new(artist_params)
@@ -45,9 +45,7 @@ class ArtistsController < ApplicationController
      end
 
 
-    # def display
-    #   @artists = Artist.all.each {|ar| puts ar.inspect}
-    # end
+
 
 
 end
