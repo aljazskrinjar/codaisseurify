@@ -4,10 +4,12 @@ class ArtistsController < ApplicationController
 
        if Artist.descenderValue
         @artists=Artist.all.order(:name)
+        render status: 200, json: @artists
 
        else
 
         @artists=Artist.all.order("name DESC")
+        render status: 200, json: @artists
 
       end
 
@@ -15,7 +17,7 @@ class ArtistsController < ApplicationController
 
      def show
        @artist = Artist.find(params[:id])
-       
+       render status: 200, json: @artist
      end
 
 
@@ -24,6 +26,10 @@ class ArtistsController < ApplicationController
        artist=Artist.find(params[:id])
        artist.destroy
        redirect_to root_path
+
+       render status: 200, json: {
+      message: "Artist successfully deleted"
+    }.to_json
 
      end
 
