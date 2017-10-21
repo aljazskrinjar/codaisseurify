@@ -5,7 +5,7 @@
 <p>Biography: <%= @artist.bio %></p>
 <p>Songs: <% @artist.songs.each do |song| %></p>
 <p><%= song.name %>
-  <%= link_to "Delete Song", song_path(song.id), method: :delete, data: { confirm: "Are you sure?" } %></p>
+  <%= link_to "Delete Song", artist_song_path(@artist.id, song.id), method: :delete, data: { confirm: "Are you sure?" } %></p>
 
 <p><% end %></p>
 <p><%= image_tag @artist.photo.image %></p>
@@ -15,9 +15,4 @@
 
 <h1>New song</h1>
 
-<%= form_for @song do |f| %>
-  <%= f.label :name %>
-  <%= f.text_field :name, :required => 'required' %>
-  <%= f.hidden_field :artist_id, :value => @artist.id %>
-  <%= f.submit "Create" %>
-<% end %>
+<%= render 'songs/form' %>
