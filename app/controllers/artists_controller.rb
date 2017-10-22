@@ -11,7 +11,7 @@ class ArtistsController < ApplicationController
      def show
        respond_to do |format|
          @artist = Artist.find(params[:id])
-         format.html{}
+         format.html{@songs = @artist.songs}
          format.json{render status: 200, json: @artist}
        end
      end

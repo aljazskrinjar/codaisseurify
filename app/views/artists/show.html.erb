@@ -3,11 +3,16 @@
 
 <p>Age: <%= @artist.age %></p>
 <p>Biography: <%= @artist.bio %></p>
+
+<ul id="songlist">
 <p>Songs: <% @artist.songs.each do |song| %></p>
-<p><%= song.name %>
-  <%= link_to "Delete Song", artist_song_path(@artist.id, song.id), method: :delete, data: { confirm: "Are you sure?" } %></p>
+
+<li class="song">
+  <%= song.name %>
+  <%= button_tag "Delete Song", data: { confirm: "Are you sure?" }, onclick: 'deleteSong(' + @artist.id.to_s + ', ' + song.id.to_s + ')' %></li>
 
 <p><% end %></p>
+</ul>
 <p><%= image_tag @artist.photo.image %></p>
 
 <%= link_to "Delete Artist", artist_path(@artist.id), method: :delete, data: { confirm: "Are you sure?" } %>
