@@ -9,7 +9,7 @@
 
 <li class="song">
   <%= song.name %>
-  <%= button_tag "Delete Song", data: { confirm: "Are you sure?" }, onclick: 'deleteSong(' + @artist.id.to_s + ', ' + song.id.to_s + ')' %></li>
+  <%= button_tag "Delete Song", onclick: 'deleteSong(' + @artist.id.to_s + ', ' + song.id.to_s + ')' %></li>
 
 <p><% end %></p>
 </ul>
