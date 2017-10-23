@@ -7,14 +7,10 @@ function deleteSong(artistID,songID) {
     dataType: "json"
   })
   .done(function(data) {
-    console.log(data);
+    console.log();
 
-    //Here I should update songs, so it will show the new list
-    //songID.parentNode.removeChild(songID);
+      $('#'+songID+'').remove();
 
-    //adding reload so I can test feature DeletingSong
-    //Arno I know we should NOT use reload() function
-    location.reload();
 
   });
 }
@@ -22,4 +18,6 @@ function deleteSong(artistID,songID) {
 
 
 $(document).ready(function() {
+
+
 });
