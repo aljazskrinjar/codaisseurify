@@ -14,8 +14,10 @@ feature 'AddingSongsTest', js: true do
     visit artist_path(artist)
     fill_in 'song_name', with: 'ljubi ljubi ljubi'
 
+
     page.execute_script("$('form').submit()")
 
     expect(page).to have_content('ljubi ljubi ljubi')
+
   end
 end

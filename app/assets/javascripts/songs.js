@@ -12,8 +12,28 @@ function deleteSong(artistID,songID) {
       $('#'+songID+'').remove();
 
 
+
   });
 }
+
+function deleteAllSongs() {
+  $("li").remove(".song");
+  //$("li").remove(".song");
+ // var currentUrl = window.location.href
+ //  $.ajax({
+ //    type: "DELETE",
+ //    url: currentUrl + "/somewhere where are all songs",
+ //    contentType: "application/json",
+ //    dataType: "json"
+ //  })
+ //  .done(function(data) {
+ //    console.log();
+ //      //delete all songs
+ //      $("li").remove(".song");
+ //
+ //
+ //  });
+  }
 
 
 

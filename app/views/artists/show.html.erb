@@ -12,7 +12,7 @@
   <% sg = song.id.to_s %>
   <%= song.name %>
 
-<button onclick="<%="deleteSong(#{ar},#{sg})" %>">Delete Song</button></li>
+<button id="<%=song.name%>" onclick="<%="deleteSong(#{ar},#{sg})" %>">Delete Song</button></li>
 
 <p><% end %></p>
 </ul>
@@ -21,6 +21,7 @@
 <%= link_to "Delete Artist", artist_path(@artist.id), method: :delete, data: { confirm: "Are you sure?" } %>
 
 
+<button onclick="<%="deleteAllSongs()"%>">Delete All Songs</button>
 
 <h1>New song</h1>
 

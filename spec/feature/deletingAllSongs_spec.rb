@@ -2,7 +2,7 @@ require 'rails_helper'
 
 
 
-feature 'AddingSongsTest', js: true do
+feature 'Deleting all songs', js: true do
 
   let(:artist) { create :artist }
   let(:songTest) { create :song , artist: artist }
@@ -15,16 +15,15 @@ feature 'AddingSongsTest', js: true do
     fill_in 'song_name', with: 'ljubi ljubi ljubi'
     page.execute_script("$('form').submit()")
 
-    fill_in 'song_name', with: 'ljubi ljubi'
+    fill_in 'song_name', with: 'nekoc'
     page.execute_script("$('form').submit()")
 
-    fill_in 'song_name', with: 'ljubi'
+    fill_in 'song_name', with: 'ko bom prisel'
     page.execute_script("$('form').submit()")
 
 
 
-    #for correct output I should have gave an id to button
-    #click_on 'deleteSong(artist.id,song.id)'
+
     click_button("Delete All Songs")
 
     expect( artist.songs.count ).to eq "0"
