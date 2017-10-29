@@ -1,4 +1,4 @@
-<%= form_for [@artist,@artist.songs.new], url: artist_songs_path(@artist.id), method: :create do |a| %>
+<%= form_for [@artist,@artist.songs.new], remote: true, url: artist_songs_path(@artist.id), method: :create do |a| %>
   <%= a.label :name %>
   <%= a.text_field :name %>
 

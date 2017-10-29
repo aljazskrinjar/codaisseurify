@@ -11,8 +11,7 @@
   <% ar = @artist.id.to_s %>
   <% sg = song.id.to_s %>
   <%= song.name %>
-
-<button id="<%=song.name%>" onclick="<%="deleteSong(#{ar},#{sg})" %>">Delete Song</button></li>
+<button class="btndelete" id="<%=song.name%>" onclick="<%="deleteSong(#{ar},#{sg})" %>">Delete Song</button></li>
 
 <p><% end %></p>
 </ul>

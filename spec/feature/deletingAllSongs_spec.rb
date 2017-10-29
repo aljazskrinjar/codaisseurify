@@ -26,7 +26,7 @@ feature 'Deleting all songs', js: true do
 
     click_button("Delete All Songs")
 
-    expect( artist.songs.count ).to eq "0"
+    expect( artist.reload.songs.reload.count ).to eq 0 
 
   end
 end
