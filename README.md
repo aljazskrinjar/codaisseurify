@@ -1,24 +1,19 @@
-# README
+# Codaisseurify
+First and second homework from Codaisseur Academy
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This rails application imitates spotify. You can delete Artist, add song, delete song and delete all songs. I wrote adding and deleting songs by using AJAX calls.
 
-Things you may want to cover:
+## Work in progress
+I have intention to style this app a bit more.
 
-* Ruby version
 
-* System dependencies
+## Running Locally
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+```bash
+git clone git@github.com:aljazskrinjar/codaisseurify.git
+cd codaisseurify
+bundle install
+rake db:create db:migrate db:seed
+rails server
+```
+go to localhost:3000 in your browser
